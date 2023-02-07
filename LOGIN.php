@@ -1,3 +1,6 @@
+<?php if (isset($_GET['error'])) { ?>
+     		<p class="error"><?php echo $_GET['error']; ?></p>
+<?php } ?>
 <?php
     $link = mysqli_connect("localhost", "root", "", "gym");
 
@@ -18,10 +21,11 @@
     AND email = '$Email'
     AND password = '$Password'";
     $result = $link->query($sql);
-    if (!$row = $result-> fetch_assoc()){
-        echo "Your account is not accepted!!!!";
-        header ("location: LOGIN.html");
-    }else{
-        header ("location: Main.html");
+    if ($row = $result-> fetch_assoc()){// change
+        header ("location: Main.php");
+        die;
+    }else{// change header login.php
+        header ("location: LOGIN_main.php?error=User Name is required");
+        exit();
     }
     ?>
