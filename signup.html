@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script defer src="js/bootstrap.min.js"></script>
+    <title>SIGNUP</title>
+    <style>
+        body {
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <!--SIGN up-->
+<section id="sign in" class="contact section-padding">
+    <div class="container">
+      <div class="row">
+       <div class="col-md-12">
+        <div class="section-header text-center pb-5 text-light">
+        <h2>SIGN UP</h2>
+        <p>JOIN US WITH OUR LIMITED MEMBERSHIP<br>ACCESS OUR LATEST GOOD FEATURE THAT TURN YOUR LIFESTYLE GOOD AND HEALTHY</p>
+        </div>
+       </div>
+      </div>
+       <div class="row m-0">
+        <div class="col-md-12 p-0 pt-4 pb-4">
+         
+          <form action="signup.php" method="post" class="bg-light p-4 rounded-4" onsubmit="return confirm('Are you sure you want to submit this form?');">
+         <div class="row">
+          <div class="col-md-12">
+            <div class="mb-3">
+              <input type="text" class="form-control" name="ID" id="ID"  placeholder="your ID" autocomplete="off" required>
+             </div>
+           <div class="mb-3">
+            <input type="text" class="form-control" name="fname" id="fname"  placeholder="your first name" autocomplete="off" required>
+           </div>
+           <div class="mb-3">
+            <input type="text" class="form-control" name="lname" id="lname"  placeholder="your last name" autocomplete="off" required>
+           </div>
+         </div>
+         <div class="col-md-12">
+          <div class="mb-3">
+           <input type="email" class="form-control" name="email" id="email"  placeholder="your email here" autocomplete="off" required>
+          </div>
+         </div>
+         <div class="col-md-12">
+          <div class="mb-3">
+           <input type="password" class="form-control" name="password" id="password"  maxlength="11" placeholder="password" autocomplete="off" required>
+          </div>
+         </div>
+         <input type="submit" name="submit" id="submit" value="sign up" class="bg-info p-3 rounded-4">
+         <div class="container signin">
+          <div class="tacbox">
+            <input id="checkbox" type="checkbox" required/>
+            <label for="checkbox"> I agree to these <a href="#">Terms and Conditions</a>.</label>
+          </div>
+          <br>
+          <p>Already have an account? <a href="LOGIN.html">Sign in</a>.</p>
+        </div>
+        </div>
+       </form>
+       </div>
+     </div>
+    </section>
+</body>
+</html>
